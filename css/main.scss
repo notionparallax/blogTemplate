@@ -14,11 +14,12 @@ $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     2em;
 
 // Width of the content area
 $content-width:    800px;
 
+$tiny:             350px; //iphone4 and other ancient phones
 $on-palm:          600px;
 $on-laptop:        800px;
 
@@ -55,5 +56,6 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting",
         "footnotes",
+        "forms",
         "article"
 ;

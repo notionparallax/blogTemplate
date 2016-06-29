@@ -39,13 +39,13 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
     border-radius: 5px;
+    border: 1px solid $grey-color-light;
+    position: absolute;
+    right: $spacing-unit / 2;
     text-align: right;
+    top: 9px;
 
     .menu-icon {
       display: block;
@@ -57,8 +57,8 @@
       text-align: center;
 
       > svg {
-        width: 18px;
         height: 15px;
+        width: 18px;
 
         path {
           fill: $grey-color-dark;
@@ -97,19 +97,20 @@
 }
 
 .footer-heading {
-  font-size: 18px;
+  font-size: 1em;
   margin-bottom: $spacing-unit / 2;
 }
 
 .contact-list,
 .social-media-list {
+  line-height: 2;
   list-style: none;
   margin-left: 0;
 }
 
 .footer-col-wrapper {
-  font-size: 15px;
   color: $grey-color;
+  font-size: 85%;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -121,13 +122,11 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:     calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:     calc(20% - (#{$spacing-unit} / 2));
+  width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
@@ -138,21 +137,18 @@
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
     width:     calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:     calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
 @include media-query($on-palm) {
   .footer-col {
     float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:     calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -168,11 +164,6 @@
   //   background-size: contain;
   // }
 }
-
-.page-heading {
-  font-size: 20px;
-}
-
 
 .post-list {
   list-style: none;
@@ -196,8 +187,8 @@
     }
 
     h2 {
-      margin-bottom: .7em;
-      margin-top: .5em;
+      line-height: 1.3;
+      margin-bottom: .5rem;
 
       a {
         color: $text-color;
@@ -207,12 +198,11 @@
 
     p {
       color: lighten($text-color, 20%);
+      display: block;
       font-size: 95%;
       line-height: 1.3;
-
       max-height: 14em;
       overflow: hidden;
-      display: block;
     }
 
     .read-more {
@@ -223,14 +213,16 @@
 
     &:hover {
       background-color: $brand-color;
-      h2, h2 a, p, .read-more, .post-date {
+      h2, 
+      h2 a, 
+      p, .read-more, .post-date {
         color: $text-color-invert;
       }
     }
 
-    @include media(max-width 900px) {
-      //single column
-    }
+    // @include media(max-width 900px) {
+    //   //single column
+    // }
 
     @include media(min-width 900px max-width 1300px) {
       @include span-columns(6);
@@ -246,13 +238,13 @@
 }
 
 .post-meta {
-  font-size: $small-font-size;
   color: $grey-color;
+  font-size: $small-font-size;
 }
 
 .post-link {
   display: block;
-  font-size: 24px;
+  font-size: 1.7rem;
 }
 
 
@@ -263,12 +255,12 @@
 }
 
 .post-title {
-  font-size: 42px;
+  font-size: 1.7rem;
   letter-spacing: -1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
-    font-size: 36px;
+    font-size: 1.5rem;
   }
 }
 
@@ -276,26 +268,26 @@
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 32px;
+    font-size: 1.8rem;
 
     @include media-query($on-laptop) {
-      font-size: 28px;
+      font-size: 1.5rem;
     }
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 1.5rem;
 
     @include media-query($on-laptop) {
-      font-size: 22px;
+      font-size: 1.3rem;
     }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 1.3rem;
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      font-size: 1.1rem;
     }
   }
 }
@@ -304,15 +296,18 @@
 .alignright {
   float: right;
 }
+
 .alignleft {
   float: left;
 }
 
-.footnotes{
-  ol{
-      @include columns(19em);
-      li{
-        margin-left: 2em;
-      }
+.footnotes {
+
+  ol {
+    @include columns(19em);
+
+    li {
+      margin-left: 2em;
+    }
   }
 }
